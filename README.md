@@ -24,16 +24,29 @@ Projeto da disciplina **Teoria da Computação** (Prof. Daniel Bezerra): Teoria 
 
 - [ ] Algoritmo A (2-SAT/SCC) na linguagem 1
 - [ ] Algoritmo A (2-SAT/SCC) na linguagem 2
-- [ ] Algoritmo B (3-SAT/DPLL) na linguagem 1
-- [ ] Algoritmo B (3-SAT/DPLL) na linguagem 2
-- [ ] Gerador de entradas com semente fixa
-- [ ] Script de medição (repetições, média, desvio-padrão)
-- [ ] Testes de corretude das 4 implementações
+- [x] Algoritmo B (3-SAT/DPLL) na linguagem 1 (C)
+- [ ] Algoritmo B (3-SAT/DPLL) na linguagem 2 (Python)
+- [ ] Gerador de entradas com semente fixa (3-SAT pronto; falta 2-SAT)
+- [ ] Script de medição (repetições, média, desvio-padrão) (3-SAT pronto; falta 2-SAT)
+- [ ] Testes de corretude das 4 implementações (3-SAT em C pronto)
 - [ ] Gráficos: teórico × medido, A × B, linguagem × linguagem
 - [ ] Gráfico mostrando onde o 3-SAT deixa de ser viável
 - [ ] (Bônus) Medição de memória × complexidade de espaço
 - [ ] Relatório em PDF (itens 1–7, ambiente, contribuições, declaração de uso de IA)
 - [ ] Slides da apresentação (≤ 7 min)
+
+## 🧩 3-SAT (DPLL em C)
+
+Requisitos: `gcc` e Python 3.
+
+```bash
+gcc -O2 -std=c99 -o c/dpll3 c/main.c c/dpll.c c/formula.c -lm   # compilar
+python gerador/gerar_3sat.py                                    # gerar entradas (semente 42)
+python testes/teste3-sat.py                                     # testes de corretude
+python benchmark/medir_3sat.py                                  # medição -> resultados/
+```
+
+Uso: `c/dpll3 arquivo.cnf [-r repeticoes] [-l limite_s] [-m]` (entrada em formato DIMACS).
 
 ## 🤖 Uso de IA
 
