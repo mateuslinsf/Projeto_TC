@@ -44,6 +44,7 @@ gcc -O2 -std=c99 -o c/dpll3 c/main.c c/dpll.c c/formula.c -lm   # compilar
 python gerador/gerar_3sat.py                                    # gerar entradas (semente 42)
 python testes/teste3-sat.py                                     # testes de corretude
 python benchmark/medir_3sat.py                                  # medição -> resultados/
+python benchmark/graficos_3sat.py                               # gráficos -> resultados/graficos/ (requer matplotlib)
 ```
 
 Uso: `c/dpll3 arquivo.cnf [-r repeticoes] [-l limite_s] [-m]` (entrada em formato DIMACS).
