@@ -1,14 +1,10 @@
 import random
 from pathlib import Path
 
-
-# Configurações dos experimentos
 TAMANHOS = [1000, 2000, 4000, 8000, 16000, 32000]
 
 FATOR_CLAUSULAS = 2
 SEMENTE = 42
-
-# Pasta onde os arquivos serão armazenados
 PASTA_SAIDA = Path(__file__).resolve().parent / "entradas"
 
 
@@ -16,16 +12,12 @@ def gerar_formula(n, m, gerador):
     clausulas = []
 
     for _ in range(m):
-
-        # Escolhe duas variáveis diferentes
         v1 = gerador.randint(1, n)
 
         v2 = gerador.randint(1, n - 1)
 
         if v2 >= v1:
             v2 += 1
-
-        # Define se cada literal será positivo ou negativo
         literal1 = v1 * gerador.choice([-1, 1])
         literal2 = v2 * gerador.choice([-1, 1])
 
@@ -38,11 +30,8 @@ def salvar_formula(n, m, clausulas):
     arquivo = PASTA_SAIDA / f"2sat_n{n}.txt"
 
     with open(arquivo, "w", encoding="utf-8") as f:
-
-        # Primeira linha: quantidade de variáveis e cláusulas
         f.write(f"{n} {m}\n")
 
-        # Demais linhas: literais das cláusulas
         for a, b in clausulas:
             f.write(f"{a} {b}\n")
 

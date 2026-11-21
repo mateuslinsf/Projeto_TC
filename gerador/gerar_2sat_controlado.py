@@ -22,7 +22,6 @@ def escolher_variaveis_distintas(n, rng):
 
 def gerar_sat(n, m, rng):
 
-    # Criamos uma atribuição conhecida para todas as variáveis
     atribuicao = {
         i: rng.choice([True, False])
         for i in range(1, n + 1)
@@ -34,13 +33,11 @@ def gerar_sat(n, m, rng):
 
         v1, v2 = escolher_variaveis_distintas(n, rng)
 
-        # O primeiro literal sempre será verdadeiro
         if atribuicao[v1]:
             literal1 = v1
         else:
             literal1 = -v1
 
-        # O segundo literal pode ser positivo ou negativo
         literal2 = v2 * rng.choice([-1, 1])
 
         clausulas.append((literal1, literal2))
@@ -49,8 +46,6 @@ def gerar_sat(n, m, rng):
 
 
 def gerar_unsat(n, m, rng):
-
-    # Este conjunto de quatro cláusulas é contraditório
     clausulas = [
         (1, 2),
         (1, -2),
@@ -58,7 +53,6 @@ def gerar_unsat(n, m, rng):
         (-1, -2)
     ]
 
-    # Completamos a fórmula até atingir m cláusulas
     while len(clausulas) < m:
 
         v1, v2 = escolher_variaveis_distintas(n, rng)
