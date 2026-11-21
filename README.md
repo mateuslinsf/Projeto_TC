@@ -58,6 +58,8 @@ python gerador/gerar_2sat.py                              # gerar entradas aleat
 python gerador/gerar_2sat_controlado.py                   # gerar entradas SAT e UNSAT
 python testes/teste2-sat-c.py                             # testes C x Python x forca bruta
 python benchmark/comparar_2sat_c_python.py                # medicao C x Python -> resultados/
+python benchmark/memoria_2sat_c.py                        # medicao de memoria do C -> resultados/
+python benchmark/graficos_2sat_c.py                       # graficos do 2-SAT em C (requer matplotlib)
 ```
 
 Uso: `c/sat2c arquivo.txt [-r repeticoes] [-m]` (primeira linha `n m`, depois uma clausula `a b` por linha).
