@@ -25,15 +25,15 @@ Projeto da disciplina **Teoria da Computação** (Prof. Daniel Bezerra): Teoria 
 - [x] Algoritmo A (2-SAT/SCC) na linguagem 1 (Python)
 - [x] Algoritmo A (2-SAT/SCC) na linguagem 2 (C)
 - [x] Algoritmo B (3-SAT/DPLL) na linguagem 1 (C)
-- [ ] Algoritmo B (3-SAT/DPLL) na linguagem 2 (Python)
-- [ ] Gerador de entradas com semente fixa (3-SAT pronto; falta 2-SAT)
-- [ ] Script de medição (repetições, média, desvio-padrão) (3-SAT pronto; falta 2-SAT)
-- [ ] Testes de corretude das 4 implementações (3-SAT em C pronto)
-- [ ] Gráficos: teórico × medido, A × B, linguagem × linguagem
-- [ ] Gráfico mostrando onde o 3-SAT deixa de ser viável
-- [ ] (Bônus) Medição de memória × complexidade de espaço
-- [ ] Relatório em PDF (itens 1–7, ambiente, contribuições, declaração de uso de IA)
-- [ ] Slides da apresentação (≤ 7 min)
+- [x] Algoritmo B (3-SAT/DPLL) na linguagem 2 (Python)
+- [x] Gerador de entradas com semente fixa (3-SAT pronto; falta 2-SAT)
+- [x] Script de medição (repetições, média, desvio-padrão) (3-SAT pronto; falta 2-SAT)
+- [x] Testes de corretude das 4 implementações (3-SAT em C pronto)
+- [x] Gráficos: teórico × medido, A × B, linguagem × linguagem
+- [x] Gráfico mostrando onde o 3-SAT deixa de ser viável
+- [x] (Bônus) Medição de memória × complexidade de espaço
+- [x] Relatório em PDF (itens 1–7, ambiente, contribuições, declaração de uso de IA)
+- [x] Slides da apresentação (≤ 7 min)
 
 ## 🧩 3-SAT (DPLL em C)
 
